@@ -1,0 +1,264 @@
+{% extends "web/partials/base-two.html" %}
+ {% block title %}Contact{% endblock  %}
+ {% load static %}
+
+  {% block content %}
+
+    <!-- Header End -->
+    <!-- Breadcrumb Start -->
+    <div class=" main-bg">
+        <div class="container-fluid p-0">
+            <div class="text-left iq-breadcrumb-one
+            iq-bg-over black     ">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-sm-12">
+                            <nav aria-label="breadcrumb" class="text-center iq-breadcrumb-two">
+                                <h2 class="title">FAQ</h2>
+                                <ol class="breadcrumb main-bg">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0)"><i class="fa fa-home mr-2"></i>Home</a></li>
+                                    <li class="breadcrumb-item active"> FAQ</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+    <!-- Faq Start -->
+    <section class="iq-pricing-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center iq-title-box iq-title-default iq-title-box-2">
+                        <div class="iq-title-icon">
+                        </div>
+                        <span class="iq-subtitle">Faq</span>
+                        <h2 class="iq-title">Frequently Asked Questions</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="iq-accordion  iq-accordion-semi-round iq-accordion-classic">
+                        {% for faq_item in faq %}
+                            <div class="iq-accordion-block">
+                                <div class="iq-accordion-title">
+                                    <div class="iq-icon-right">
+                                        <i aria-hidden="true" class="ion ion-minus-round active"></i>
+                                        <i aria-hidden="true" class="ion ion-plus inactive"></i>
+                                    </div>
+                                    <h5 class="mb-0 accordion-title">{{ faq_item.title }}</h5>
+                                </div>
+                                <div class="iq-accordion-details">
+                                    <p class="iq-content-text">{{ faq_item.description|safe }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Faq End -->
+    <!-- Counter Start -->
+    <section class="main-bg" style="background: url('{% static 'web/images/others/06.jpg' %}') no-repeat 0 0; background-attachment: fixed; background-size:cover; ">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 mb-lg-0 mb-5">
+              <div class="iq-title-box iq-title-default iq-title-box-2">
+                <span class="iq-subtitle">Why choose DCNS?</span>
+                <h2 class="iq-title text-white">The Choice for Innovation and Excellence</h2>
+                <p class="iq-title-desc text-white">Take DCNS, where innovation meets commitment, to the forefront of your business. Customized solutions, proven success, and an unwavering customer focus make us your ideal partner for a safe and streamlined journey into the digital future. Choose DCNS and thrive with technical excellence.</p>
+              </div>
+              <div class="iq-list iq-two-column">
+                <ul class="iq-list-with-icon">
+                  <li class="text-white">
+                    <i class="ion ion-checkmark-round"></i>
+                    New features at Core
+                  </li>
+  
+                  <li class="text-white">
+                    <i class="ion ion-checkmark-round"></i>
+                    Solutions designed for your success
+                  </li>
+  
+                  <li class="text-white">
+                    <i class="ion ion-checkmark-round"></i>
+                    Dedicated to unparalleled service
+                  </li>
+  
+                  <li class="text-white">
+                    <i class="ion ion-checkmark-round"></i>
+                    Full track record
+                  </li>
+  
+                  <li class="text-white">
+                    <i class="ion ion-checkmark-round"></i>
+                    Approach to User-Based Communications
+                  </li>
+  
+                  <li class="text-white">
+                    <i class="ion ion-checkmark-round"></i>
+                    Security and compliance guarantee
+                  </li>
+  
+                  <li class="text-white">
+                    <i class="ion ion-checkmark-round"></i>
+                    Customer focus
+                  </li>
+  
+                  <li class="text-white">
+                    <i class="ion ion-checkmark-round"></i>
+                    Ongoing learning and change
+                  </li>
+                </ul>
+              </div>
+              <div class="iq-btn-container mt-4">
+                <a class="iq-button iq-btn-medium iq-btn-round iq-btn-flat d-none" href="javascript:void(0)">Read More</a>
+              </div>
+            </div>
+            <div class="col-lg-6 align-self-stretch align-self-center d-none">
+              <div class="iq-popup-video">
+                <div class="iq-video-img position-relative">
+                  <div class="iq-video-icon wow FadeIn">
+                    <a href="https://www.youtube.com/watch?v=XHOmBV4js_E" class="iq-video popup-youtube"><i aria-hidden="true" class="ion ion-play"></i></a>
+                    <div class="iq-waves">
+                      <div class="waves wave-1"></div>
+                      <div class="waves wave-2"></div>
+                      <div class="waves wave-3"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Counter End -->
+    <!-- Blog Start -->
+    <section class="pb-5 mb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center iq-title-box iq-title-default iq-title-box-2">
+                            <div class="iq-title-icon">
+                            </div>
+                            <span class="iq-subtitle">Blog</span>
+                            <h2 class="iq-title"> Recent Blog </h2></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="3" data-items-laptop="3" data-items-tab="2" data-items-mobile="1" data-items-mobile-sm="1" data-margin="30">
+                            <div class="item">
+                                <div class="iq-blog-box">
+                                    <div class="iq-blog-image clearfix">
+                                        <img src="{% static 'web/images/blog/01.png' %}" class="img-fluid" alt="unisaas-blog">
+                                        <ul class="iq-blogtag">
+                                            <li><a href="javascript:void(0)">Marketing</a></li>
+                                        </ul>
+    
+                                    </div>
+                                    <div class="iq-blog-detail">
+                                        <div class="iq-blog-meta">
+                                            <ul class="iq-postdate">
+                                                <li class="list-inline-item">
+                                                    <i class="fa fa-calendar-alt mr-2"></i>
+                                                    <span class="screen-reader-text">Posted on</span>
+                                                    <a href="javascript:void(0)" rel="bookmark">
+                                                        <time class="entry-date published updated" datetime="2020-02-17T06:40:07+00:00">February 17, 2020</time>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+    
+                                        <div class="blog-title">
+                                            <a href="blog-details.html">
+                                                <h5 class="mb-3">Build Construction</h5>
+                                            </a>
+                                        </div>
+                                        <p class="">It is a long established fact that a reader will be distracted by the readable.</p>
+                                        <div class="blog-button">
+                                            <a class="iq-btn-link" href="blog-details.html">Read More<i class="ml-2 ion-ios-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="iq-blog-box">
+                                    <div class="iq-blog-image clearfix">
+                                        <img src="{% static 'web/images/blog/02.png' %}" class="img-fluid" alt="unisaas-blog">
+                                        <ul class="iq-blogtag">
+                                            <li><a href="javascript:void(0)">Marketing</a></li>
+                                        </ul>
+    
+                                    </div>
+                                    <div class="iq-blog-detail">
+                                        <div class="iq-blog-meta">
+                                            <ul class="iq-postdate">
+                                                <li class="list-inline-item">
+                                                    <i class="fa fa-calendar-alt mr-2"></i>
+                                                    <span class="screen-reader-text">Posted on</span>
+                                                    <a href="javascript:void(0)" rel="bookmark">
+                                                        <time class="entry-date published updated" datetime="2020-02-17T06:44:40+00:00">February 17, 2020</time>
+                                                    </a>
+                                                </li>
+                                            </ul>
+    
+                                        </div>
+    
+                                        <div class="blog-title">
+                                            <a href="blog-details.html">
+                                                <h5 class="mb-3">Official Terraform Provider</h5>
+                                            </a>
+                                        </div>
+                                        <p class="">It is a long established fact that a reader will be distracted by the readable.</p>
+                                        <div class="blog-button">
+                                            <a class="iq-btn-link" href="blog-details.html">Read More<i class="ml-2 ion-ios-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="iq-blog-box">
+                                    <div class="iq-blog-image clearfix">
+                                        <img src="{% static 'web/images/blog/03.png' %}" class="img-fluid" alt="unisaas-blog">
+                                        <ul class="iq-blogtag">
+                                            <li><a href="javascript:void(0)">Marketing</a></li>
+                                        </ul>
+    
+                                    </div>
+                                    <div class="iq-blog-detail">
+                                        <div class="iq-blog-meta">
+                                            <ul class="iq-postdate">
+                                                <li class="list-inline-item">
+                                                    <i class="fa fa-calendar-alt mr-2"></i>
+                                                    <span class="screen-reader-text">Posted on</span>
+                                                    <a href="javascript:void(0)" rel="bookmark">
+                                                        <time class="entry-date published updated" datetime="2020-02-17T06:43:49+00:00">February 17, 2020</time>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="blog-title">
+                                            <a href="blog-details.html">
+                                                <h5 class="mb-3">CCPA Compliance Update</h5>
+                                            </a>
+                                        </div>
+                                        <p class="">It is a long established fact that a reader will be distracted by the readable.</p>
+                                        <div class="blog-button">
+                                            <a class="iq-btn-link" href="blog-details.html">Read More<i class="ml-2 ion-ios-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Blog End -->
+    {% endblock %}

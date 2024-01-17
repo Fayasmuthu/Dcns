@@ -1,0 +1,99 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock  %} | Dcns</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'web/images/favicon.ico' %}" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/bootstrap.min.css' %}">
+    <!-- Typography CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/typography.css' %}">
+    <!-- Style CSS -->
+    <link rel='stylesheet' href="{% static 'web/css/qloud-style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/responsive.css' %}">
+
+
+</head>
+
+<body>
+
+    {% include "web/partials/header-white.html" %}
+    {% block content %}
+    {% endblock %}
+    {% include "web/partials/footer.html" %}
+
+    <!-- back-to-top End -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'web/js/jquery-3.4.1.js' %}"></script>
+    <!-- jQuery  for scroll me js -->
+    <script src="{% static 'web/js/jquery-min.js' %}"></script>
+    <!-- popper  -->
+    <script src="{% static 'web/js/popper.min.js' %}"></script>
+    <!--  bootstrap -->
+    <script src="{% static 'web/js/bootstrap.min.js' %}"></script>
+    <!-- Appear JavaScript -->
+    <script src="{% static 'web/js/appear.js' %}"></script>
+    <!-- Jquery-migrate JavaScript -->
+    <script src="{% static 'web/js/jquery-migrate.min.js' %}"></script>
+    <!-- Scripts JavaScript -->
+    <script src="{% static 'web/js/scripts.js' %}"></script>
+    <!-- countdownTimer JavaScript -->
+    <script src="{% static 'web/js/jQuery.countdownTimer.min.js' %}"></script>
+    <!-- Tox-progress JavaScript -->
+    <script src="{% static 'web/js/tox-progress.min.js' %}"></script>
+    <!-- Timeline JavaScript -->
+    <script src="{% static 'web/js/timeline.js' %}"></script>
+    <!-- Timeline min JavaScript -->
+    <script src="{% static 'web/js/timeline.min.js' %}"></script>
+    <!-- Slick JavaScript -->
+    <script src="{% static 'web/js/slick.min.js' %}"></script>
+    <!-- Popper JavaScript -->
+    <script src="{% static 'web/js/popper.min.js' %}"></script>
+    <!-- Owl.carousel JavaScript -->
+    <script src="{% static 'web/js/owl.carousel.min.js' %}"></script>
+    <!-- Countdown JavaScript -->
+    <script src="{% static 'web/js/countdown.js' %}"></script>
+    <!-- Jquery.countTo JavaScript -->
+    <script src="{% static 'web/js/jquery.countTo.js' %}"></script>
+    <!-- Magnific-popup JavaScript -->
+    <script src="{% static 'web/js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- Isotope.pkgd.min JavaScript -->
+    <script src="{% static 'web/js/isotope.pkgd.min.js' %}"></script>
+    <!-- Wow JavaScript -->
+    <script src="{% static 'web/js/wow.min.js' %}"></script>
+    <!--  Custom JavaScript -->
+    <script src="{% static 'web/js/custom.js' %}"></script>
+    <script>
+        $(function () {
+  
+          $('#contact-form').on('submit', function (e) {
+           const value='<div class="alert alert-success">Form was submitted</div>'
+           const url = $(this).attr('action')   
+            e.preventDefault();
+  
+            $.ajax({
+              type: 'post',
+              url: url,
+              data: $(this).serialize(),
+              success: function () {
+                $('.screen-reader-response').html(value)
+                setTimeout(function() { $('.screen-reader-response').html('') },2000);
+              }
+            });
+  
+          });
+  
+        });
+      </script>
+     
+      
+         {% block js %}{% endblock %}
+</body>
+
+</html>

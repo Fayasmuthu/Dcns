@@ -1,0 +1,169 @@
+{% extends "web/partials/base-two.html" %} 
+{% block title %}Contact{% endblock  %} 
+{% load static %}
+{% block content %}
+
+         <!-- Breadcrumb Start -->
+         <div class=" main-bg" >
+            <div class="container-fluid p-0">
+               <div class="text-left iq-breadcrumb-one
+                  iq-bg-over black     ">
+                  <div class="container">
+                     <div class="row align-items-center">
+                        <div class="col-sm-12">
+                           <nav aria-label="breadcrumb" class="text-center iq-breadcrumb-two">
+                              <h2 class="title">
+                               Service Details
+                              </h2>
+                              <ol class="breadcrumb main-bg">
+                                 <li class="breadcrumb-item"><a href="{% url "web:index" %}"><i class="fa fa-home mr-2"></i>Home</a></li> <li class="breadcrumb-item active">Service Details</li>       
+                              </ol>
+                              </nav>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Breadcrumb End -->
+         <!-- Blog Start -->
+         <div class="iq-blog-section overview-block-ptb">
+            <div class="container">
+                     <div class="row">
+                        <div class="col-lg-8 col-sm-12 mt-lg-0 mx-auto mt-5"> 
+                          <article id="post-218" class="post-218 post type-post status-publish format-standard has-post-thumbnail hentry category-marketing tag-business tag-marketing">
+                           <div class="iq-blog-box">
+                                    <div class="iq-blog-image clearfix">
+                                       <img  src="{{services.image.url}}" class="img-fluid" alt="qloud" />         
+                                    </div>
+                                       <div class="iq-blog-detail">
+                                          <h3>{{services.name}}</h3>
+                                       <div class="blog-content">
+                                          <p>{{services.description|safe}}</p>
+                                       </div>
+                                    </div>
+                                    </div>
+                           </div>
+                           </aside><!-- #secondary -->  
+                        </div>
+                     </div><!-- #row -->   
+            </div>
+         </div>
+
+             <!-- Main-Content Start -->
+    <div class="main-content">
+
+      <!-- service Details Start -->
+      <div class=" mb-5 ">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-8 col-md-12 mx-auto">
+                      <div class=" text-left iq-title-box iq-title-default iq-title-box-2 ">
+                          <div class="iq-title-icon">
+                          </div>
+                          <span class="iq-subtitle mx-auto">Get In Touch</span>
+                          <h2 class="iq-title text-center">Service With US   </h2>
+
+                          <p class="iq-title-desc text-center">{{services.name}}</p>
+                      </div>
+                      <div role="form" class="wpcf7" id="wpcf7-f790-p785-o1" lang="en-US" dir="ltr">
+                          <div class="screen-reader-response"></div>
+                          <form class="row wpcf7-form ajax redirect" data-redirect="/" method="post">
+                              {% csrf_token %}
+                              <div style="display: none;">
+                                  <input type="hidden" name="_wpcf7" value="790" />
+                                  <input type="hidden" name="_wpcf7_version" value="5.1.6" />
+                                  <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                  <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f790-p785-o1" />
+                                  <input type="hidden" name="_wpcf7_container_post" value="785" />
+                              </div>
+                              <div class=row>
+                                 <div class="col-lg-12">
+                                    <span class="wpcf7-form-control-wrap services">
+                                        <input type="hidden" 
+                                        name="services"
+                                        id="services" 
+                                        value="{{ services.name }}" size="40" 
+                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" 
+                                        aria-required="true" aria-invalid="false" placeholder="{{services.name}}" readonly />
+                                    </span>
+                                </div>
+
+                                  <div class="col-lg-6">
+                                      <span class="wpcf7-form-control-wrap first-name">
+                                          <input type="text" 
+                                          name="first_name"
+                                          id="first_name" 
+                                          value="" size="40" 
+                                          class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" 
+                                          aria-required="true" aria-invalid="false" placeholder="First Name" />
+                                      </span>
+                                  </div>
+                                  <div class="col-lg-6">
+                                      <span class="wpcf7-form-control-wrap last-name">
+                                          <input type="text" 
+                                          name="last_name"
+                                          id="last_name" 
+                                          value="" size="40" 
+                                          class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" 
+                                          aria-required="true" aria-invalid="false" placeholder="Last Name" />
+                                      </span>
+                                  </div>
+                                  <div class="col-lg-6">
+                                      <span class="wpcf7-form-control-wrap your-email">
+                                          <input type="email"
+                                          name="email"
+                                          id="email" 
+                                          value="" size="40" 
+                                          class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                          aria-required="true" aria-invalid="false" placeholder="Email Address" />
+                                      </span>
+                                  </div>
+                                  <div class="col-lg-6">
+                                      <span class="wpcf7-form-control-wrap tel-554">
+                                          <input type="tel" 
+                                          name="phone" 
+                                          id="phone"
+                                          value=""
+                                          size="40" 
+                                          class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel" 
+                                          aria-invalid="false" placeholder="Phone" />
+                                      </span>
+                                  </div>
+                                  <div class="col-lg-12">
+                                      <p> 
+                                      <span class="wpcf7-form-control-wrap your-message">
+                                          <textarea 
+                                          name="message"
+                                          id="message" 
+                                          cols="40" rows="10" 
+                                          class="wpcf7-form-control wpcf7-textarea" 
+                                          aria-invalid="false" placeholder="Message"></textarea>
+                                      </span>
+                                      </p>
+                                  </div>
+                                  <div class="col-lg-12">
+                                      <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit" />
+                                  </div>
+                              </div>
+                              <div class="wpcf7-response-output wpcf7-display-none"></div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+
+  </div>
+      
+      <!-- back-to-top -->
+      <div id="back-to-top">
+         <a class="top" id="top" href="#top"> <i class="ion-ios-arrow-up"></i> </a>
+      </div>
+      <!-- back-to-top End -->
+
+      {% endblock %}
+      {% block js %}
+      {% include 'web/include/form-ajax.html' %}
+      {% endblock %}
