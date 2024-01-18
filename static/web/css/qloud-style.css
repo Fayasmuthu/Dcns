@@ -4896,7 +4896,8 @@ ol.commentlist .trackback a:hover {
   padding: 5px 0 0px;
   z-index: 9;
   position: relative;
-  background: #0d1e67;
+  /* background: #0d1e67; */
+  background-image: url(web\images\dcnsbg.jpeg);
 }
 
 .iq-breadcrumb-one ol li a {
