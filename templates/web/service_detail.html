@@ -1,6 +1,7 @@
 {% extends "web/partials/base-two.html" %} 
 {% block title %}Contact{% endblock  %} 
 {% load static %}
+
 {% block content %}
 
          <!-- Breadcrumb Start -->
@@ -16,7 +17,9 @@
                                Service Details
                               </h2>
                               <ol class="breadcrumb main-bg">
-                                 <li class="breadcrumb-item"><a href="{% url "web:index" %}"><i class="fa fa-home mr-2"></i>Home</a></li> <li class="breadcrumb-item active">Service Details</li>       
+                                 <li class="breadcrumb-item"><a href="{% url "web:services" %}"><i class="fa fa-briefcase"></i>
+                                 </i>  Service</a></li>
+                                  <li class="breadcrumb-item active">Service Details</li>       
                               </ol>
                               </nav>
                            </div>
@@ -66,9 +69,9 @@
 
                           <p class="iq-title-desc text-center">{{services.name}}</p>
                       </div>
-                      <div role="form" class="wpcf7" id="wpcf7-f790-p785-o1" lang="en-US" dir="ltr">
+                      <div role="form" class="wpcf7 overview-block-ptb-form" id="wpcf7-f790-p785-o1" lang="en-US" dir="ltr">
                           <div class="screen-reader-response"></div>
-                          <form class="row wpcf7-form ajax redirect" data-redirect="/" method="post">
+                          <form class="row wpcf7-form ajax redirect" data-redirect="{% url 'web:services' %}" method="post" >
                               {% csrf_token %}
                               <div style="display: none;">
                                   <input type="hidden" name="_wpcf7" value="790" />

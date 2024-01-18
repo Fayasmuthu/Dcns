@@ -1132,7 +1132,7 @@ rs-loader.off {
 	display: none !important;
 }
 
-rs-loader.spinner0 {
+/* rs-loader.spinner0 {
 	width: 40px;
 	height: 40px;
 	background-color: #fff;
@@ -1144,7 +1144,7 @@ rs-loader.spinner0 {
 	margin-left:-20px;	
 	animation: tp-rotateplane 1.2s infinite ease-in-out;
 	border-radius: 3px;	
-}
+} */
 
 
 rs-loader.spinner1 {

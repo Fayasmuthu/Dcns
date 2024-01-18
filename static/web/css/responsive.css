@@ -354,7 +354,7 @@ Design and Developed by: iqonicthemes.in
 	}
 
 	.overview-block-ptb {
-		padding: 75px 0;
+		padding: 0px 0;
 	}
 
 	.overview-block-pt {
@@ -853,6 +853,13 @@ Design and Developed by: iqonicthemes.in
 	.textgyreadventor {
 		font-size: 30px !important;
 	  }
+	  .texttype{
+		font-size: 16px;
+	}
+
+	.iq-blog-detail h3{
+		font-size: 1.5em;
+	  }
 }
 
 @media(max-width:390px) {
@@ -860,7 +867,26 @@ Design and Developed by: iqonicthemes.in
 	.textgyreadventor {
 		font-size: 25px !important;
 	  }
-	.iq-blog-detail h3{
-		font-size: 1.5em;
-	  }
+	  
+	.texttype{
+		font-size: 13px;
+	}
+
+	.iq-blog-detail h3 {
+		font-size: 1.1em;
+		width: 250px;
+		/* text-align: justify; */
+		/* white-space: pre-line;  */
+	}
+	
+	.blog-content p{
+		font-size: 0.9em;
+		text-align: left;
+	}
+	.iq-accordion-block .accordion-title {
+		font-size: 14px;
+	}
+	.iq-accordion-block p{
+		font-size: 12px;
+	}
 }
