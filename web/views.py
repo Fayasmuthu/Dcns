@@ -103,7 +103,7 @@ class UpdatesDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['request'] = self.request
-        context['recent_posts'] = Updates.objects.exclude(id=self.object.id).order_by('-pub_date')[:5]
+        context['recent_posts'] = Updates.objects.exclude(id=self.object.id).order_by('-pub_date')[:8]
         return context
 
 

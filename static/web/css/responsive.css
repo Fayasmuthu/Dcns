@@ -353,6 +353,16 @@ Design and Developed by: iqonicthemes.in
 		overflow: hidden;
 	}
 
+	.misson {
+		position: relative;
+		z-index: 99;
+		background: #ffffff;
+		padding: 0px 0;
+		display: block;
+		width: 100%;
+		overflow: hidden;
+	}
+
 	.overview-block-ptb {
 		padding: 50px 0;
 	}
