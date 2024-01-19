@@ -23,7 +23,8 @@ class IndexView(TemplateView):
         context = super().get_context_data(**kwargs)
         context["is_index"] = True
         context["client"] = Client.objects.all()
-        context["testimonials"] = Testimonial.objects.all()     
+        context["testimonials"] = Testimonial.objects.all()
+        context["updates"] =Updates.objects.filter(is_updates=True)
         return context
     
 
