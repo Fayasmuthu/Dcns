@@ -1,5 +1,8 @@
 from django.contrib import admin
-from .models import Contact,Service,Updates,Faq,Enquiryform,Client,Testimonial
+from .models import (
+    Contact,Service,Updates,Faq,
+    Enquiryform,Client,Testimonial
+    )
 from django.utils.safestring import mark_safe
 
 # Register your models here.

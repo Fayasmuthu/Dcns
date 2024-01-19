@@ -7,8 +7,14 @@ from django.views.generic import ListView
 from django.views.generic import TemplateView
 from django.views.generic.detail import DetailView
 # form
-from web.forms import ContactForm,EnquiryForm
-from web.models import Service,Updates,Faq,Client,Testimonial
+from web.forms import ContactForm
+from web.forms import EnquiryForm
+# Model
+from web.models import Service
+from web.models import Updates
+from web.models import Faq
+from web.models import Client
+from web.models import Testimonial
 
 
 class IndexView(TemplateView):
