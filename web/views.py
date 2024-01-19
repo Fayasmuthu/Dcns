@@ -23,9 +23,7 @@ class IndexView(TemplateView):
         context = super().get_context_data(**kwargs)
         context["is_index"] = True
         context["client"] = Client.objects.all()
-        context["testimonials"] = Testimonial.objects.all()
-
-           
+        context["testimonials"] = Testimonial.objects.all()     
         return context
     
 
@@ -47,7 +45,6 @@ class ServicesView(View):
         context = {
             "is_service": True,
             "services": services,
-
         }
         return render(request, "web/services.html", context)
 
@@ -92,7 +89,6 @@ class UpdatesView(View):
         context = {
             "is_updates": True,
             "updates": updates,
-
         }
         return render(request, "web/updates.html", context)  
 

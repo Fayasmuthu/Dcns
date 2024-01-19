@@ -106,6 +106,7 @@ class Enquiryform(models.Model):
     def __str__(self):
         return f"{self.services}  "
 
+
 class Client(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField(unique=True)
@@ -113,6 +114,7 @@ class Client(models.Model):
 
     def __str__(self):
         return self.title
+    
     
 class Testimonial(models.Model):
     content = models.TextField()
