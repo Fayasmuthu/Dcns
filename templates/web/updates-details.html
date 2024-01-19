@@ -71,21 +71,11 @@
             <div id="recent-posts-2" class="widget widget_recent_entries">
               <h2 class="widget-title">Recent Posts</h2>
               <ul>
+                {% for recent_post in recent_posts %}
                 <li>
-                  <a href="javascript:void(0)">Official Terraform Provider</a>
+                  <a href="{% url 'web:updates_detail' slug=recent_post.slug %}">{{ recent_post.title }}</a>
                 </li>
-                <li>
-                  <a href="javascript:void(0)">CCPA Compliance Update</a>
-                </li>
-                <li>
-                  <a href="javascript:void(0)">Introducing Object Storage!</a>
-                </li>
-                <li>
-                  <a href="javascript:void(0)">Content Marketing</a>
-                </li>
-                <li>
-                  <a href="javascript:void(0)">Life Lack Meaning</a>
-                </li>
+                {% endfor %}
               </ul>
             </div>
           </aside>
