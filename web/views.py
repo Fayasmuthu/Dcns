@@ -8,7 +8,7 @@ from django.views.generic import TemplateView
 from django.views.generic.detail import DetailView
 # form
 from web.forms import ContactForm,EnquiryForm
-from web.models import Service,Faq
+from web.models import Service,Updates,Faq,Client,Testimonial
 
 
 class IndexView(TemplateView):
@@ -16,6 +16,9 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["is_index"] = True
+        context["client"] = Client.objects.all()
+        context["testimonials"] = Testimonial.objects.all()
+
            
         return context
     
@@ -42,19 +45,10 @@ class ServicesView(View):
         }
         return render(request, "web/services.html", context)
 
-
-class UpdatesView(View):
-    def get(self, request):
-
-        context = {
-            "is_updates": True,
-
-        }
-        return render(request, "web/updates.html", context)  
-
+    
 class ServiceDetailView(DetailView):
     model = Service
-    template_name = "web/service_detail.html"
+    template_name = "web/services_detail.html"
     context_object_name = 'services'
     slug_field = 'slug'
     slug_url_kwarg = 'slug'
@@ -82,6 +76,32 @@ class ServiceDetailView(DetailView):
                 "title": "Form validation error",
             }
         return JsonResponse(response_data)
+
+
+class UpdatesView(View):
+    def get(self, request):
+
+        updates = Updates.objects.filter(is_updates=True)
+
+        context = {
+            "is_updates": True,
+            "updates": updates,
+
+        }
+        return render(request, "web/updates.html", context)  
+
+
+class UpdatesDetailView(DetailView):
+    model = Updates
+    template_name = "web/updates-details.html"
+    context_object_name = 'updates'
+    slug_field = 'slug'
+    slug_url_kwarg = 'slug'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['request'] = self.request
+        return context
 
 
 class FaqView(View):

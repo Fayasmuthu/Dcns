@@ -16,6 +16,8 @@ ALLOWED_HOSTS = ["*"]
 
 
 INSTALLED_PLUGINS = [
+    "admin_interface",
+    "colorfield",
     'ckeditor',
 
 ]
@@ -34,7 +36,8 @@ MODULES = [
 ]
 
 INSTALLED_APPS = INSTALLED_PLUGINS + DJANGO_APPS + MODULES
-
+X_FRAME_OPTIONS = "SAMEORIGIN"
+SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

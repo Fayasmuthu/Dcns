@@ -171,46 +171,13 @@
           <div class="col-lg-12 col-md-12 col-sm-12 align-self-center">
             <div class="iq-client iq-client-style-1 iq-has-grascale">
               <div id="my-carousel" class="owl-carousel" data-dots="false" data-nav="false" data-items="6" data-items-laptop="4" data-items-tab="2" data-items-mobile="1" data-items-mobile-sm="1" data-autoplay="true" data-loop="true" data-margin="30">
+                {% for i in client %}
                 <div class="item">
                   <div class="iq-client-img">
-                    <img src="{% static 'web/images/client/01.png' %}" class="img-fluid" alt="client-img" />
+                    <img src="{{ i.image.url }}" class="img-fluid" alt="client-img" />
                   </div>
                 </div>
-                <div class="item">
-                  <div class="iq-client-img">
-                    <img src="{% static 'web/images/client/02.png' %}" class="img-fluid" alt="client-img" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="iq-client-img">
-                    <img src="{% static 'web/images/client/03.png' %}" class="img-fluid" alt="client-img" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="iq-client-img">
-                    <img src="{% static 'web/images/client/04.png' %}" class="img-fluid" alt="client-img" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="iq-client-img">
-                    <img src="{% static 'web/images/client/05.png' %}" class="img-fluid" alt="client-img" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="iq-client-img">
-                    <img src="{% static 'web/images/client/06.png' %}" class="img-fluid" alt="client-img" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="iq-client-img">
-                    <img src="{% static 'web/images/client/01.png' %}" class="img-fluid" alt="client-img" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="iq-client-img">
-                    <img src="{% static 'web/images/client/02.png' %}" class="img-fluid" alt="client-img" />
-                  </div>
-                </div>
+                {% endfor %}
               </div>
             </div>
           </div>
@@ -218,49 +185,7 @@
       </div>
     </div>
     <!-- Client End -->
-    <section class="iq-fancy-box-section">
-      <img src="images/others/shape1.png" class="img-fluid shape-left" alt="QLOUD">
-      <div class="container">
-          
-          <div class="row">
-              <div class="col-lg-6 mb-lg-0 mb-5">
-                  <div class="iq-process iq-process-step-style-6 text-center wow fadeInUp" data-wow-duration="0.6s">
-                      <div class="iq-process-step">
-                          <div class="iq-step-content">
-                              <img class="hover-img img-fluid" src="{% static 'web/images/work/01.png' %}" alt="fancybox"> </div>
-                          <div class="iq-step-text-area">
-                              <h4 class="iq-step-title mt-3 mb-3">Our Mission</h4>
-                              <span class="iq-step-desc">
-                                Speed ​​is key in the business world. DCNS is dedicated to enabling employees to connect with the right people,
-                                get the right information, and at the right time. We coexist seamlessly with technology, leveraging its potential as
-                                 an essential business tool to achieve today’s business goals.
-                        </span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-6 mb-lg-0 mb-5">
-                  <div class="iq-process iq-process-step-style-6 text-center wow fadeInUp" data-wow-duration="1.2s">
-                      <div class="iq-process-step">
-                          <div class="iq-step-content">
-                              <img class="hover-img img-fluid" src="{% static 'web/images/work/02.png' %}" alt="fancybox">
-                          </div>
-                          <div class="iq-step-text-area">
-                              <h4 class="iq-step-title mt-3 mb-3">Our Vision</h4>
-                              <span class="iq-step-desc">
-                                As an integrated professional community, we see an evolving landscape in which professional roles are diverse 
-                                and geographically diverse. In this era of activity diversity and widespread dispersion, unity becomes more 
-                                difficult and vital. At DCNS, we intend to overcome these challenges by leveraging our collective expertise 
-                                and state-of-the-art technology to create a seamless collaboration for our clients to succeed.
-                        </span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              
-          </div>
-      </div>
-  </section>
+   
 
     <section>
 
@@ -397,7 +322,7 @@
     <!-- Icon-box End -->
 
     <!-- Counter Start -->
-    <section class="main-bg" style="background: url('{% static 'web/images/others/06.jpg' %}') no-repeat 0 0; background-attachment: fixed; background-size:cover; ">
+    <section class="main-bg main-bg-index" style="background: url('{% static 'web/images/others/06.jpg' %}') no-repeat 0 0; background-attachment: fixed; background-size:cover; ">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 mb-lg-0 mb-5">
@@ -572,66 +497,24 @@
               <div class="col-lg-12 col-md-12 col-sm-12 align-self-center">
                   <div class="iq-testimonial text-center iq-testimonial-7">
                       <div class="owl-carousel" data-dots="false" data-nav="false" data-items="3" data-items-laptop="3" data-items-tab="2" data-items-mobile="1" data-items-mobile-sm="1" data-autoplay="true" data-loop="true" data-margin="30">
-                          <div class="iq-testimonial-info">
+                        {% for testimonial in testimonials %}
+                        <div class="iq-testimonial-info">
                               <div class="iq-testimonial-content">
-                                  <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text typesetting over the ever since the 1500s, when an unknown dummy text printer took a galley.</p>
+                                  <p>{{ testimonial.content }}</p>
                                   <div class="iq-testimonial-avtar">
-                                      <img alt="image-testimonial" class="img-fluid center-block" src="{% static 'web/images/testimonial/01.png' %}">
+                                      <img alt="image-testimonial" class="img-fluid center-block" src="{{ testimonial.avatar_image.url }}">
                                   </div>
                               </div>
                               <div class="iq-testimonial-member">
                                   <div class="avtar-name">
                                       <div class="iq-lead">
-                                          JD Scot </div>
-                                      <span class="iq-post-meta">Designer, Qloud</span>
+                                        {{ testimonial.author_name }} 
+                                      </div>
+                                      <span class="iq-post-meta">{{ testimonial.author_position }}</span>
                                   </div>
                               </div>
                           </div>
-                          <div class="iq-testimonial-info">
-                              <div class="iq-testimonial-content">
-                                  <p>Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever over the since the 1500s, when an unknown printer took a galley dummy text of type and scrambled.</p>
-                                  <div class="iq-testimonial-avtar">
-                                      <img alt="image-testimonial" class="img-fluid center-block" src="{% static 'web/images/testimonial/02.png' %}">
-                                  </div>
-                              </div>
-                              <div class="iq-testimonial-member">
-                                  <div class="avtar-name">
-                                      <div class="iq-lead">
-                                          Haris Morgan </div>
-                                      <span class="iq-post-meta">Designer, Qloud</span>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="iq-testimonial-info">
-                              <div class="iq-testimonial-content">
-                                  <p>Text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text over the ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
-                                  <div class="iq-testimonial-avtar">
-                                      <img alt="image-testimonial" class="img-fluid center-block" src="{% static 'web/images/testimonial/03.png' %}">
-                                  </div>
-                              </div>
-                              <div class="iq-testimonial-member">
-                                  <div class="avtar-name">
-                                      <div class="iq-lead">
-                                          Nik Jorden </div>
-                                      <span class="iq-post-meta">Designer, Qloud</span>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="iq-testimonial-info">
-                              <div class="iq-testimonial-content">
-                                  <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown dummy text printer.</p>
-                                  <div class="iq-testimonial-avtar">
-                                      <img alt="image-testimonial" class="img-fluid center-block" src="{% static 'web/images/testimonial/01.png' %}">
-                                  </div>
-                              </div>
-                              <div class="iq-testimonial-member">
-                                  <div class="avtar-name">
-                                      <div class="iq-lead">
-                                          Rinks Cooper </div>
-                                      <span class="iq-post-meta">Designer, Qloud</span>
-                                  </div>
-                              </div>
-                          </div>
+                          {% endfor %}
                       </div>
                   </div>
               </div>

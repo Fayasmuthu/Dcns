@@ -1,0 +1,101 @@
+{% extends 'web/partials/base-two.html' %}
+{% block title %}
+  Contact
+{% endblock %}
+{% load static %}
+
+{% block content %}
+  <!-- Breadcrumb Start -->
+  <div class="main-bg">
+    <div class="container-fluid p-0">
+      <div class="text-left iq-breadcrumb-one iq-bg-over black">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-sm-12">
+              <nav aria-label="breadcrumb" class="text-center iq-breadcrumb-two">
+                <h2 class="title">Update Details</h2>
+                <ol class="breadcrumb main-bg">
+                  <li class="breadcrumb-item">
+                    <a href="{% url 'web:index' %}"><i class="fa fa-home mr-2"></i>Home</a>
+                  </li>
+                  <li class="breadcrumb-item active">Update Details</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Breadcrumb End -->
+  <!-- Blog Start -->
+  <div class="iq-blog-section overview-block-ptb">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-12 mt-lg-0 mt-5">
+          <article id="post-218" class="post-218 post type-post status-publish format-standard has-post-thumbnail hentry category-marketing tag-business tag-marketing">
+            <div class="iq-blog-box">
+              <div class="iq-blog-image clearfix">
+                <img src="{{ updates.image.url }}" class="img-fluid" alt="qloud" />
+                <ul class="iq-blogtag">
+                  <li>
+                    <a href="javascript:void(0)">{{updates.category}}</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="iq-blog-detail">
+                <div class="iq-blog-meta">
+                  <ul class="iq-postdate">
+                    <li class="list-inline-item">
+                      <i class="fa fa-calendar mr-2"></i>
+                      <span class="screen-reader-text">Posted on</span> 
+                      <a href="javascript:void(0)" rel="bookmark">
+                        <time class="entry-date published updated" datetime="2020-02-17T06:44:40+00:00">{{ updates.pub_date}}</time>
+                     </a>
+                    </li>
+                  </ul>
+                  <h3>{{updates.title}}</h3>
+                </div>
+                
+                <div class="blog-content">
+                  <p>{{updates.content}}</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- #post-## -->
+        </div>
+
+        <div class="col-lg-4 col-sm-12 mt-lg-0 mt-5">
+          <aside id="secondary" class="widget-area" aria-label="Blog Sidebar">
+            <div id="recent-posts-2" class="widget widget_recent_entries">
+              <h2 class="widget-title">Recent Posts</h2>
+              <ul>
+                <li>
+                  <a href="javascript:void(0)">Official Terraform Provider</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">CCPA Compliance Update</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">Introducing Object Storage!</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">Content Marketing</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">Life Lack Meaning</a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <!-- #secondary -->
+        </div>
+      </div>
+      <!-- #row -->
+    </div>
+  </div>
+{% endblock %}
+{% block js %}
+  {% include 'web/include/form-ajax.html' %}
+{% endblock %}

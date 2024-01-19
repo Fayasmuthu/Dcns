@@ -374,7 +374,7 @@ header {
   top: 0;
   left: 0;
   z-index: 999;
-  padding: 10px 0;
+  padding: 0px 0;
   transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -396,7 +396,7 @@ header .navbar .navbar-brand {
 }
 
 header .navbar .navbar-brand img {
-  height: 40px;
+  height: 90px;
   transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -486,7 +486,7 @@ header.header2.menu-sticky {
 /* Header sticky */
 header.menu-sticky {
   position: fixed;
-  padding: 10px 0;
+  padding: 0px 0;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
@@ -494,7 +494,7 @@ header.menu-sticky {
 }
 
 header.menu-sticky .navbar .navbar-brand img {
-  height: 40px;
+  height: 80px;
 }
 
 header .navbar ul li {
@@ -1000,7 +1000,7 @@ footer .footer-top .widget ul li a:hover {
 }
 
 footer .footer-top .widget .textwidget img {
-  width: 100px;
+  width: 300px;
 }
 
 footer .footer-logo img {
@@ -4833,7 +4833,10 @@ ol.commentlist .trackback a:hover {
 .iq-breadcrumb .title,
 .iq-breadcrumb-one .title {
   font-size: 50px;
-  color: #ffffff;
+  /* color: #ffffff; */
+  /* color: #38abff; */
+  color: #0494ff;
+
 }
 
 .iq-breadcrumb nav {
@@ -4897,7 +4900,7 @@ ol.commentlist .trackback a:hover {
   z-index: 9;
   position: relative;
   /* background: #0d1e67; */
-  background-image: url(web\images\dcnsbg.jpeg);
+  /* background-image: url(web\images\dcnsbg.jpeg); */
 }
 
 .iq-breadcrumb-one ol li a {

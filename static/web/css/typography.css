@@ -265,8 +265,26 @@ Text color
 /*---------------------------------------------------------------------
 Background  color
 -----------------------------------------------------------------------*/
-.main-bg {
+/* .main-bg {
   background: #0D1E67;
+} */
+
+.main-bg {
+  display: block;
+  padding: 5px 0 0px;
+  z-index: 9;
+  position: relative;
+  /* background-image: url(../images/dcnsbg.jpeg); */
+  /* background-image:
+  linear-gradient(to bottom,rgba(9, 40, 163, 0.694), rgba(245, 246, 252, 0.52)),
+  url(../images/dcnsbg.jpeg); */
+  background-image: 
+  linear-gradient(to bottom,rgb(0 11 53 / 81%), rgb(0 0 0 / 52%)),
+  url(../images/dcnsbg.jpeg);
+}
+
+.main-bg-index{
+  padding-top: 30px !important; 
 }
 
 .blue-bg {
