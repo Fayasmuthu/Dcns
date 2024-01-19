@@ -36,7 +36,7 @@ class Updates(models.Model):
     slug = models.SlugField(unique=True)
     content = models.TextField()
     image = models.ImageField(upload_to='web/images/update/')
-    pub_date = models.DateTimeField(auto_now_add=True)
+    pub_date = models.DateField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     category = models.CharField(max_length=100, blank=True, null=True)
     is_updates = models.BooleanField(default=False)
@@ -115,7 +115,7 @@ class Client(models.Model):
     def __str__(self):
         return self.title
     
-    
+
 class Testimonial(models.Model):
     content = models.TextField()
     author_name = models.CharField(max_length=100)
