@@ -56,10 +56,20 @@
                     if (status == "true") {
                         title ? (title = title) : (title = "Success");
                         Swal.fire({
-                            title: title,
-                            html: message,
+   
                             icon: "success",
-                        }).then(function () {
+                            title: "Your work has been saved DCNS",
+                            showConfirmButton: false,
+                            timer: 2000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                              toast.onmouseenter = Swal.stopTimer;
+                              toast.onmouseleave = Swal.resumeTimer;
+                            },
+                            backdrop:false,
+                            //background: 'linear-gradient(to right, #ff7e5f, #feb47b)' 
+                            //background: 'linear-gradient(0deg, rgba(207,205,235,0.9108018207282913) 0%, rgba(0,14,133,1) 100%), rgba(0, 0, 0, 0)'  // Set the backdrop color to fully transparent
+                          }).then(function () {
                             redirect && (window.location.href = redirect_url), reload && window.location.reload(), reset && window.location.reset();
                         });
                     } else {
@@ -68,6 +78,9 @@
                             title: title,
                             html: message,
                             icon: "error",
+                            showConfirmButton: false,
+                            timer: 1500,
+                            backdrop:false
                         });
                     }
                 },
@@ -85,4 +98,4 @@
             });
         }
     });
-</script>
+</script>    
